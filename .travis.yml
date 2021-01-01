@@ -16,11 +16,6 @@ script: "./gradlew clean build"
 
 before_install:
   - chmod +x gradlew
-  
-notifications:
-  email:
-    recipients:
-      - gitvideouser@gmail.com
 
 before_deploy:
   - zip -r freelec-springboot2-webservice *
@@ -37,3 +32,8 @@ deploy:
       acl: private
       local_dir: deploy
       wait-until-deployed: true
+
+notifications:
+  email:
+    recipients:
+      - gitvideouser@gmail.com
