@@ -18,15 +18,19 @@ before_install:
   - chmod +x gradlew
 
 before_deploy:
-  - zip -r freelec-springboot2-webservice *
-  - mkdir -p deploy
-  - mv freelec-springboot2-webservice.zip deploy/freelec-springboot2-webservice.zip
+  - mkdir -p before-deploy
+  - cp scripts/*.sh before-deploy/
+  - cp appspec.yml before-deploy/
+  - cp build/libs/*.jar before-deploy/
+  - cd before-deploy && zip -r before-deploy
+  - cd ../ && mkdir -p deploy
+  - mv before-deploy/before-deploy.zip deploy/freelec-springboot2-webservice.zip
 
 deploy:
       - provider: s3
-        access_key_id: $AWS_ACCESS_KEY
-        secret_access_key: $AWS_SECRET_KEY
-        bucket: freelec-springboot-build-dongjin
+        access_key_id: $AWS_ACCESS_KEY #Travis Repo에 세팅한 키
+        secret_access_key: $AWS_SECRET_KEY #Travis Repo에 세팅한 비밀번호
+        bucket: freelec-springboot-build-dongjin #S3 버킷
         region: ap-northeast-2
         skip_cleanup: true
         acl: private
@@ -34,13 +38,13 @@ deploy:
         wait-until-deployed: true
 
       - provider: codedeploy
-        access_key_id: $AWS_ACCESS_KEY
-        secret_access_key: $AWS_SECRET_KEY
-        bucket: freelec-springboot-build-dongjin
-        key: freelec-springboot2-webservice.zip
+        access_key_id: $AWS_ACCESS_KEY #Travis Repo에 세팅한 키
+        secret_access_key: $AWS_SECRET_KEY #Travis Repo에 세팅한 비밀번호
+        bucket: freelec-springboot-build-dongjin #S3 버킷
+        key: freelec-springboot2-webservice.zip #S3 버킷에 저장된 zip 파일 이름
         bundle_type: zip
-        application: free-springboot2-webservice
-        deployment_group: freelec-springboot2-webservice
+        application: free-springboot2-webservice #CodeDeploy 애플리케이션 이름
+        deployment_group: freelec-springboot2-webservice #CodeDeploy 배포 그룹 이름
         region: ap-northeast-2
         wait-until-deployed: true
 
