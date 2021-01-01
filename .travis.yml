@@ -39,7 +39,7 @@ deploy:
         bucket: freelec-springboot-build-dongjin
         key: freelec-springboot2-webservice.zip
         bundle_type: zip
-        application: freelec-springboot2-webservice
+        application: free-springboot2-webservice
         deployment_group: freelec-springboot2-webservice-group
         region: ap-northeast-2
         wait-until-deployed: true
