@@ -21,7 +21,6 @@ notifications:
   email:
     recipients:
       - gitvideouser@gmail.com
-<<<<<<< HEAD
 
 before_deploy:
   - zip -r freelec-springboot2-webservice *
@@ -38,5 +37,3 @@ deploy:
       acl: private
       local_dir: deploy
       wait-until-deployed: true
-=======
->>>>>>> b91e469fa76a0615bf70a34de5dc7b2f90bdf60e
