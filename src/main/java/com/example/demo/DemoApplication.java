@@ -1,6 +1,5 @@
 package com.example.demo;
 
-import com.example.demo.domain.posts.Posts;
 import com.example.demo.domain.posts.PostsRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
@@ -21,9 +20,9 @@ public class DemoApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		repository.save(Posts.builder().title("title")
-				.content("content")
-				.author("jojoldu@gmail.com")
-				.build());
+//		repository.save(Posts.builder().title("title")
+//				.content("content")
+//				.author("jojoldu@gmail.com")
+//				.build());
 	}
 }
