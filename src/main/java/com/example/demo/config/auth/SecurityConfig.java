@@ -1,6 +1,5 @@
 package com.example.demo.config.auth;
 
-import com.example.demo.domain.user.Role;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -20,7 +19,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                     .authorizeRequests()
                     .antMatchers("/","/css/**","/images/**","/js/**","/h2-console/**", "/profile").permitAll()
-                    .antMatchers("/api/v1/**").hasRole(Role.USER.name())
+                    .antMatchers("/api/v1/**").permitAll()
                     .anyRequest().authenticated()
                 .and()
                     .logout()
