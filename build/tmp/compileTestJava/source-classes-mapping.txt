@@ -1,0 +1,8 @@
+com/example/demo/PostsApiControllerTest.java
+ com.example.demo.PostsApiControllerTest
+com/example/demo/domain/posts/PostsRepositoryTest.java
+ com.example.demo.domain.posts.PostsRepositoryTest
+com/example/demo/IndexControllerTest.java
+ com.example.demo.IndexControllerTest
+com/example/demo/DemoApplicationTests.java
+ com.example.demo.DemoApplicationTests

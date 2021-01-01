@@ -1,0 +1,47 @@
+com/example/demo/PostsApiController.java
+ com.example.demo.PostsApiController
+com/example/demo/domain/posts/Posts.java
+ com.example.demo.domain.posts.Posts
+ com.example.demo.domain.posts.Posts$PostsBuilder
+com/example/demo/config/auth/CustomOAuth2UserService.java
+ com.example.demo.config.auth.CustomOAuth2UserService
+com/example/demo/domain/posts/PostsRepository.java
+ com.example.demo.domain.posts.PostsRepository
+com/example/demo/domain/BaseTimeEntity.java
+ com.example.demo.domain.BaseTimeEntity
+com/example/demo/web/dto/PostsResponseDto.java
+ com.example.demo.web.dto.PostsResponseDto
+com/example/demo/config/auth/SecurityConfig.java
+ com.example.demo.config.auth.SecurityConfig
+com/example/demo/domain/user/User.java
+ com.example.demo.domain.user.User
+ com.example.demo.domain.user.User$UserBuilder
+com/example/demo/config/auth/dto/SessionUser.java
+ com.example.demo.config.auth.dto.SessionUser
+com/example/demo/config/auth/dto/OAuthAttributes.java
+ com.example.demo.config.auth.dto.OAuthAttributes
+ com.example.demo.config.auth.dto.OAuthAttributes$OAuthAttributesBuilder
+com/example/demo/IndexController.java
+ com.example.demo.IndexController
+com/example/demo/domain/user/Role.java
+ com.example.demo.domain.user.Role
+com/example/demo/config/auth/LoginUser.java
+ com.example.demo.config.auth.LoginUser
+com/example/demo/web/dto/PostsSaveRequestDto.java
+ com.example.demo.web.dto.PostsSaveRequestDto
+ com.example.demo.web.dto.PostsSaveRequestDto$PostsSaveRequestDtoBuilder
+com/example/demo/config/auth/LoginUserArgumentResolver.java
+ com.example.demo.config.auth.LoginUserArgumentResolver
+com/example/demo/web/dto/PostsListResponseDto.java
+ com.example.demo.web.dto.PostsListResponseDto
+com/example/demo/config/WebConfig.java
+ com.example.demo.config.WebConfig
+com/example/demo/domain/user/UserRepository.java
+ com.example.demo.domain.user.UserRepository
+com/example/demo/DemoApplication.java
+ com.example.demo.DemoApplication
+com/example/demo/web/dto/PostsUpdateRequestDto.java
+ com.example.demo.web.dto.PostsUpdateRequestDto
+ com.example.demo.web.dto.PostsUpdateRequestDto$PostsUpdateRequestDtoBuilder
+com/example/demo/service/posts/PostsService.java
+ com.example.demo.service.posts.PostsService
